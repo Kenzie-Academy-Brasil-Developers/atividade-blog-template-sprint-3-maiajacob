@@ -1,82 +1,330 @@
-/*
-Theme Name: Blogs
-Theme URI: http://www.desenvolvimentos.com.br
-Author: Kenzie Academy BR
-Author URI: https://kenzie.com.br;
-Description: Descrição do thema.
-Version: 1.0
-
---------------------------------------------
-ESTRUTURAÇÃO BASE
---------------------------------------------
-**** DECLARAÇÃO DE VARIÁVEIS
-**** ESTILOS GERAIS
-**** BODY
-**** HEADER
-**** FOOTER
-**** PÁGINA INICIAL
-**** EXTRAS
-**** @MEDIA
-
-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-
-*/
-
-/* VARIÁVEIS */
-:root{}
-/* VARIÁVEIS */
-  
-  
-/* GERAL */
-html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul, a{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-    list-style: none;
-    text-decoration: none;
+:root {
+  --letter_color: #fff;
+  --background_color: #000000;
 }
-/* GERAL */
-  
-/* HTML */
-html{}
-/* HTML */
-  
-/* BODY */
-body{}
-/* BODY */
-  
 
-/* HEADER */
-header{}
-/* HEADER */
-  
+html {
+  max-width: 1180px;
+  margin: 0 auto;
+}
 
-/* FOOTER */
-footer{}
-/* FOOTER */
+body {
+  align-items: center;
+  padding: 40px;
+  background-image: url(/src/EVvJpmgU8AAEq2q.jpeg);
+}
 
-  
-/* INICIAL */
-main{}
-/* INICIAL */
-  
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background_color);
+  color: var(--letter_color);
+  padding: 15px 0px;
+  font-size: 1.5em;
+  font-family: "Otomanopee One", sans-serif;
+}
 
-/* EXTRAS */
+.buttons__main {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
 
-/* para estilizar a scrollbar */
-::-webkit-scrollbar{}
-::-webkit-scrollbar-button{}
-::-webkit-scrollbar-track{}
-::-webkit-scrollbar-track-piece{}
-::-webkit-scrollbar-thumb{}
-::-webkit-scrollbar-corner{}
-::-webkit-resizer{}
-/* EXTRAS */
-  
+main {
+  display: flex;
+  gap: 30px;
+}
 
-/* MEDIA QUERIES */
-@media screen and (min-width: 400px){}
+button {
+  outline: 0;
+  background-color: var(--background_color);
+  padding: 10px 15px;
+  color: var(--letter_color);
+  border-radius: 3px;
+  width: 200px;
+  cursor: pointer;
+  font-size: 1em;
+  font-family: "Otomanopee One", sans-serif;
+  border: 1px solid transparent;
+  margin: 10px 10px;
+  box-shadow: 3px 3px #999;
+}
 
-@media screen and (min-width: 800px){}
-/* MEDIA QUERIES */
+button:hover,
+#subscribe:hover {
+  color: var(--background_color);
+  background-color: var(--letter_color);
+  border: 1px solid var(--background_color);
+  transition-duration: 0.5s;
+}
+
+button:active {
+  box-shadow: 1.5px 1.5px #999;
+  transform: translateY(2px);
+}
+
+.img-artigo {
+  max-width: 600px;
+  width: 100%;
+  height: 400px;
+  border: 2px solid var(--background_color);
+}
+
+.img-artigo:hover {
+  border: 2px solid var(--letter_color);
+  border-radius: 4px;
+}
+
+main.artigo {
+  display: flex;
+  flex-direction: column;
+}
+
+.artigo__1,
+.artigo__2 {
+  display: flex;
+  flex-direction: column;
+}
+
+h2,
+.p-main {
+  background-color: var(--background_color);
+  color: var(--letter_color);
+  width: 600px;
+  margin-top: 0;
+  text-align: justify;
+  border: 2px solid var(--background_color);
+}
+
+.img-categoria {
+  width: 450px;
+  height: 200px;
+}
+
+h3,
+.p-aside {
+  background-color: var(--background_color);
+  color: var(--letter_color);
+  width: 450px;
+  margin-top: 0;
+  text-align: justify;
+}
+
+h2,
+h3 {
+  text-align: center;
+  margin-bottom: 0;
+  padding: 15px 0px;
+}
+
+.p-aside {
+  text-align: justify;
+  margin: 0;
+}
+
+.p-main {
+  margin-bottom: 0;
+}
+
+.to-right_categorias,
+.to-right_mais-vistos,
+.to-right_darkSide {
+  border: 2px solid var(--background_color);
+  margin-bottom: 45px;
+}
+
+.to-right_categorias:hover,
+.to-right_mais-vistos:hover,
+.to-right_darkSide:hover {
+  border: 2px solid var(--letter_color);
+}
+
+footer {
+}
+
+#newsletter {
+  padding: 15px;
+  background: var(--background_color);
+  border-top: 1px solid var(--letter_color);
+}
+
+.container {
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container h1 {
+  text-align: center;
+}
+
+#newsletter h1 {
+  letter-spacing: 2px;
+  font-size: 2.5em;
+  margin: 0;
+  color: #fff;
+}
+
+#newsletter form {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+#newsletter input[type="email"] {
+  padding: 8px;
+  height: 30px;
+  width: 300px;
+  background: #eee;
+  outline: none;
+  border: none;
+  color: #222;
+  transition: 0.3s linear;
+}
+
+#subscribe {
+  height: 40px;
+  border: 1px solid #fff;
+  color: #fff;
+  background: var(--background_color);
+  outline: none;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  margin: 0px 20px;
+}
+
+#newsletter input[type="email"]:focus {
+  background: rgba(255, 255, 255, 0.84);
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    max-width: 400px;
+    padding: 40px 10px;
+  }
+
+  header {
+    font-size: 0.5em;
+  }
+
+  header::after {
+    content: "MENU";
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--letter_color);
+    padding-left: 40px;
+  }
+
+  .buttons__main {
+    display: none;
+  }
+
+  main {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+
+  .artigo__1 {
+    padding-bottom: 30px 0px;
+  }
+
+  .to-right {
+    margin: 40px 0px;
+    align-items: flex-start;
+  }
+  .img-artigo,
+  .img-categoria {
+    width: 300px;
+    height: 100px;
+  }
+
+  h2,
+  h3,
+  .p-main,
+  .p-aside {
+    width: 300px;
+  }
+
+  .container {
+    width: 100%;
+  }
+  #newsletter {
+    padding: 10px;
+    border-top: 1px solid var(--letter_color);
+  }
+
+  #newsletter h1 {
+    letter-spacing: 1px;
+    font-size: 1em;
+    margin: 0;
+    color: var(--letter_color);
+    text-align: center;
+    padding: 5px 0px;
+  }
+
+  #newsletter form {
+    padding: 10px 20px;
+  }
+
+  #newsletter input[type="email"] {
+    justify-content: center;
+    padding: 5px 10px;
+    height: 10px;
+    width: 200px;
+    margin-left: 20px;
+  }
+
+  #subscribe {
+    font-size: 0.7em;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 800px) {
+  body {
+    max-width: 400px;
+  }
+
+  main {
+    flex-wrap: wrap;
+    align-content: center;
+  }
+
+  header {
+    font-size: 0.5em;
+  }
+
+  .buttons__main {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-size: 0.7em;
+  }
+
+  button {
+    width: 150px;
+    padding: 5px;
+    margin: 5px;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  .to-right {
+    margin: 40px 0px;
+    align-items: flex-start;
+  }
+  .img-artigo,
+  .img-categoria {
+    width: 300px;
+    height: 100px;
+  }
+
+  h2,
+  h3,
+  .p-main,
+  .p-aside {
+    width: 300px;
+  }
+}
